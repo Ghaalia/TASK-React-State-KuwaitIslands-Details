@@ -20,7 +20,9 @@ export default function IslandForm({ island }) {
       <h2>{island.name}</h2>
       <img src={island.img} alt={island.name} />
       <h3>Book a trip to {island.name} island</h3>
+      <p> Name: </p>
       <input placeholder="Type Full Name" type="text" id="name" />
+      <p> Phone: </p>
       <input placeholder="Type Phone Number" type="phone" id="phone" />
       <button
         className="book"
