@@ -1,11 +1,18 @@
+import { useState } from "react";
+
 export default function IslandForm({ island }) {
-  const getUserInputs = () => {
+  const Booking = () => {
     let userName = document.getElementById("name").value;
     let userPhone = document.getElementById("phone").value;
 
-    // return confirm(
-    //   `Are you sure you want to book to ${island.name} with the Name: ${userName}, phone: ${userPhone}`
-    // );
+    let isConfirmed = window.confirm(
+      `Are you sure you want to book to ${island.name} with the Name: ${userName}, phone: ${userPhone}`
+    );
+
+    if (isConfirmed) {
+      island["visitors"]++;
+      // console.log(island.visitors);
+    }
   };
 
   return (
@@ -18,7 +25,7 @@ export default function IslandForm({ island }) {
       <button
         className="book"
         onClick={() => {
-          getUserInputs();
+          Booking();
         }}
       >
         Book for today!
