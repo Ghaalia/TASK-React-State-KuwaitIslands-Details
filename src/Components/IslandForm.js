@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default function IslandForm({ island }) {
   const Booking = () => {
     let userName = document.getElementById("name").value;
