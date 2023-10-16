@@ -1,4 +1,4 @@
-export default function IslandForm({ island }) {
+export default function IslandForm({ island, setIsland }) {
   const Booking = () => {
     let userName = document.getElementById("name").value;
     let userPhone = document.getElementById("phone").value;
@@ -8,8 +8,7 @@ export default function IslandForm({ island }) {
     );
 
     if (isConfirmed) {
-      island["visitors"]++;
-      // console.log(island.visitors);
+      setIsland({ ...island, visitors: island.visitors++ });
     }
   };
 

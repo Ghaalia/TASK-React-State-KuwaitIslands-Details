@@ -16,7 +16,7 @@ function App() {
 
       <div className="homePage">
         <IslandList setIsland={setIsland} />
-        <IslandForm island={island} />
+        <IslandForm island={island} setIsland={setIsland} />
       </div>
     </div>
   );
